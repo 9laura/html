@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faça seu pedido</title>
+</head>
+<body style="background-color: #e8e8e8; text-align: center; font-family: Arial, Helvetica;">
+     <header style="background-color: #d86129; text-align: center; padding: 20px;">
+        <h1 style="color: #ffffff;">Lanchonete</h1> 
+        <h2 style="color: #ffffff;">Monte seu pedido</h2>
+        </header>
+
+        <form>
+
+        <p style = "text-align: center;">
+
+        <section style="background-color: rgb(255, 255, 255); text-align: left; margin: 0 auto; max-width: 600px; padding: 2%; border-radius: 8px;"> 
+        
+        <p style="color: rgb(0, 0, 0); padding: 10px; font-size: 25px; font-weight: 600;"> Dados do cliente:</p>
+        <section style="background-color: #e8e8e8; text-align: left; margin: 0 auto; max-width: 600px; padding: 2%; border-radius: 8px;">
+        <label> Nome</label><br>
+        <input type="text" id="Nome"><br>
+        <label> Número</label><br>
+        <input type="number" id="Number"><br>
+        </section>
+
+        <p style="color: rgb(0, 0, 0); padding: 10px; font-size: 25px; font-weight: 600;"> Escolha um dos lanches:</p>
+        <input type="radio" id="Lanches"
+        value="X-Salada"> <label>X-Salada</label><br>
+        <input type="radio" id="Lanches"
+        value="X-Bacon"> <label>X-Bacon</label><br>
+        <input type="radio" id="Lanches"
+        value="X-Frango"> <label>X-Frango</label><br>
+
+        <p style="color: rgb(0, 0, 0); padding: 10px; font-size: 25px; font-weight: 600;"> Adicionais (pode escolher quantos quiser):</p>
+        <input type="checkbox" id="Adicionais"
+        value="Batata frita"> <label>Batata frita</label><br>
+        <input type="checkbox" id="Adicionais"
+        value="Nuggets"> <label>Nuggets</label><br>
+        <input type="checkbox" id="Adicionais"
+        value="Onion Rings"> <label>Onion Rings</label><br>
+
+        <p style="color: rgb(0, 0, 0); padding: 10px; font-size: 25px; font-weight: 600;"> Bebida:</p>
+        <input type="radio" id="Bebida"
+        value="Refrigerante"> <label>Refrigerante</label><br>
+        <input type="radio" id="Bebida"
+        value="Suco"> <label>Suco</label><br>
+        <input type="radio" id="Bebida"
+        value="Água"> <label>Água</label><br>
+        <input type="radio" id="Bebida"
+        value="Milkshake"> <label>Milkshake</label><br>
+
+        <p style="color: rgb(0, 0, 0); padding: 10px; font-size: 25px; font-weight: 600;"> Observações:</p>
+        <textarea placeholder="(Ex: Sem cebola, bem passado)" style="width: 50%; padding: 1px; border-radius: 5px; margin-bottom: 15px;"></textarea>
+        
+        <div style="text-align: left; ">
+        <button style="background-color: #d86129; width: 100px; height: 50px; padding: 10px; border-radius: 10px; border: none; box-shadow: 20px; color: white;" type ="submit" value="Enviar"> Enviar</button>
+        </div>
+
+        </section>
+
+    </form>
+</body>
+</html>
