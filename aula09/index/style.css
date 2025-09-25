@@ -1,0 +1,19 @@
+body {
+    background-image: url('img/flor.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: aqua;
+}
+
+body::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: lightgrey;
+}
+
+p {
+    font-size: 90px;
+}
