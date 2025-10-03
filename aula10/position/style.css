@@ -1,0 +1,41 @@
+* {
+font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    position: fixed;
+    left: 860px;
+    background-color: blanchedalmond;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.12);
+}
+p {
+    font-size: 40px;
+}
+
+div{
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.12);
+}
+
+.caixa1{
+    background-color: rgb(0, 154, 0);
+    z-index: -1;
+    right: 15px;
+    bottom: 15px;
+    position: absolute;
+}
+.caixa2{
+    background-color: blue;
+    position: sticky;
+    top: 0;
+    z-index: -1;
+}
+.caixa3 {
+    background-color: violet;
+    position: relative;
+    left: 300px;
+}
