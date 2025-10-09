@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 40px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.galeria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.galeria img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    opacity: 0.6; /* Transparência inicial */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.galeria img:hover {
+    opacity: 1; /* Fica totalmente visível */
+    transform: scale(1.1); /* Aumenta a escala */
+}
