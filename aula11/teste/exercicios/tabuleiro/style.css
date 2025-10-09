@@ -31,3 +31,12 @@ body {
 .cor10 { background-color: #ffb7f5; }
 .cor11 { background-color: #ffdc91; }
 .cor12 { background-color: #53afff; }
+
+/*<table>
+                <tr>
+                    <td rowspan="2">(31) 98765-4321</td>  Mescla 2 linhas
+                </tr>
+                <tr>
+                    <td colspan="3">Finalizando</td>  Mescla 3 colunas 
+                </tr>
+            </table>*/
