@@ -13,13 +13,14 @@ body {
     margin-top: 20px;
 }
 
-.galeria img {
-    width: 100%;
-    height: 200px;
+.galeria img {;
+    height: 500px;
     object-fit: cover;
     border-radius: 8px;
     transition: transform 0.3s;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 500px;       /* limita a largura máxima */
+    margin: 50px 50px; 
 }
 
 .galeria img:hover {
