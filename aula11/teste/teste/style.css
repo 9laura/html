@@ -1,0 +1,56 @@
+body {
+    display: grid;
+
+    grid-template-columns: 20% 60% 20%; /*tres colunas*/
+    grid-template-rows: auto 1fr auto; /*tres linhas*/
+    min-height: 100vh; /*altura total da tela*/
+    gap: 5px; /*espaçamento entre os elementos*/
+
+    grid-template-areas:
+        "header header header"
+        "nav main aside"
+        "footer footer footer";
+
+    margin: 0;
+    overflow-x: hidden;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #00ffdd;
+    min-height: 60px; /* altura fixa do rodapé */
+    /* height: 60px;  se quiser altura exata */
+}
+
+header {
+    grid-area: header;
+    background-color: #ff00f2;
+    min-height: 60px; /* altura fixa do rodapé */
+    /* height: 60px;  se quiser altura exata */
+}
+
+nav {
+    grid-area: nav;
+    background-color: #51ff00;
+}
+
+main {
+    grid-area: main;
+    background-color: #fffb00;
+}
+
+aside {
+    grid-area: aside;
+    background-color: #0080ff;
+}
+
+header ,
+footer {
+    color: white;
+}
+
+header, nav, main, aside, footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
