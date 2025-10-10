@@ -1,0 +1,147 @@
+img {
+    width: 250px;
+}
+
+.blur {
+    filter: blur(4px); /* Aplica o efeito de desfoque */
+}
+
+.grayscale {
+    filter: grayscale(100%); /* Converte a imagem para tons de cinza */
+}
+
+.sepia {
+    filter: sepia(100%); /* Aplica o efeito sépia */
+}
+
+.brightness {
+    filter: brightness(150%); /* Aumenta o brilho em 50% */
+}
+
+.invert {
+    filter: invert(100%); /* Inverte as cores da imagem */
+}
+
+.contrast {
+    filter: contrast(200%); /* Aumenta o contraste em 100% */
+}
+
+.galeria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+
+
+
+
+h1 {
+    margin-bottom: 20px;
+    color: #000000;
+    font-family: monospace;
+    text-align: center;
+    font-size: 50px;
+}
+h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #000000;
+    font-family: monospace;
+    text-align: center;
+}
+
+.galeria img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.galeria {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.galeria img:hover {
+    opacity: 1; /* Fica totalmente visível */
+    transform: scale(1.1); /* Aumenta a escala */
+}
+
+.galeria2 img:hover {
+    filter: invert(100%);
+    opacity: 1; /* Fica totalmente visível */
+    transform: scale(1.1); /* Aumenta a escala */
+}
+
+.galeria2 img {
+    display: flex;
+    justify-content: center;
+    margin: 1% 44% ;
+    align-items: center;
+    height: 300px; /* ou o valor desejado */
+    width: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.filmes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    gap: 8px;
+    margin: 8px;
+    justify-items: center;
+    align-items: center;
+}
+
+.lw {
+    filter: grayscale(100%) blur(4px);
+  
+}
+
+.loseguy {
+    filter: grayscale(100%) blur(4px);
+}
+
+.es {
+    filter: grayscale(100%) blur(4px);
+}
+
+.hg {
+    filter: grayscale(100%) blur(4px);
+}
+
+.tangled {
+    filter: grayscale(100%) blur(4px);
+}
+
+.spn {
+    filter: grayscale(100%) blur(4px);
+}
+
+.filmes img {
+    height: 300px; /* ou o valor desejado */
+    width: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.filmes img:hover {
+    filter: none;
+    opacity: 1; /* Fica totalmente visível */
+    transform: scale(1.1); /* Aumenta a escala */
+}
