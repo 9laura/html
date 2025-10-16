@@ -1,0 +1,48 @@
+/*TRANSITION.CSS*/
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container {
+    
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.bola {
+    width: 100px;
+    height: 100px;
+    background-color: lightskyblue;
+    border-radius: 360px;
+    margin: 20px;
+    transition: transform 5s;
+}
+
+.container :hover .bola {
+    transform: translateX(300px);
+}
+
+.ease {
+    transform-timing-function: ease;
+}
+
+.linear {
+    transform-timing-function: linear;
+}
+
+.ease-in {
+    transform-timing-function: ease-in;
+}
+
+.ease-out {
+    transform-timing-function: ease-out;
+}
+
+.ease-in-out {
+    transform-timing-function: ease-in-out;
+}

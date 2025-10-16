@@ -1,0 +1,46 @@
+button {
+    display: block;
+    margin: 20px 0;
+}
+
+.sombra {
+    /*BOX SHADOW X Y  DESFOQUE COR*/
+    box-shadow: 5px 5px 1px rgb(189, 188, 188)
+}
+
+.linha {
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-decoration-thickness: 2px;
+}
+
+/*TRANSITIONS*/
+/*SEM TRANSITION*/
+
+.sem {
+    background-color: red;
+}
+
+.sem:hover {
+    background-color: blue;
+}
+
+/*COM TRANSITION*/
+
+.transition {
+    background-color: red;
+    transition: background-color 1s ease;
+}
+
+.transition:hover {
+    background-color: blue;;
+}
+
+img {
+    width: 200px;
+    transition: width 3s ease;
+}
+
+img:hover {
+    width: 300px;
+} 

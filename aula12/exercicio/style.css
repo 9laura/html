@@ -1,0 +1,172 @@
+button {
+    display: block;
+    margin: 20px 0;
+    border-radius: 20px;
+     width: 100px;
+    height: 50px;
+    
+}
+
+/*Exercício 1*/
+
+.transition {
+    background-color: red;
+    transition: background-color 1s ease;
+    color: rgb(190, 247, 255);
+}
+
+.transition:hover {
+    background-color: blue;
+    color: rgb(255, 180, 180);
+}
+
+/*Exercício 2*/
+
+.big {
+    transition: transform 1s ease;
+}
+
+.big:hover {
+    transform: scale(1.1); /* Aumenta a escala */
+}
+
+/*Exercício 3*/
+
+.atraso {
+    
+    background-color: rgb(0, 0, 0);
+    transition: background-color 0.3s 0.5s, color 0.3s 0.5s, border-color 0.3s 0.5s;
+    color: white;
+    border-color: rgb(0, 0, 0);
+}
+
+.atraso:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+}
+
+/*Exercício 4*/
+
+.cartao {
+    display: flex;
+  justify-content: center; /* centra horizontal */
+  align-items: center; 
+  border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    text-align: center;
+    box-shadow: 4px 4px 8px rgba(138, 138, 138, 0.171);
+
+    transition: box-shadow 1s ease, width 1s ease, background-color 1s ease;
+}
+
+.cartao:hover {
+    background-color: rgb(190, 255, 184);
+    width: 200px;
+    box-shadow: 8px 8x 4px rgb(0, 0, 0);
+}
+
+/*Exercício 5*/
+
+p {
+    font-size: 18px;
+    color: #333;
+    width: 60%;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: color 0.5s, font-size 0.5s;
+}
+
+/* Parágrafo 1 */
+.paragrafo1:hover {
+    color: #007bff;
+    font-size: 22px;
+}
+
+/* Parágrafo 2 com atraso */
+.paragrafo2 {
+    transition: color 0.5s 0.5s, font-size 0.5s 0.5s;
+}
+.paragrafo2:hover {
+    color: #28a745;
+    font-size: 24px;
+}
+
+/* Parágrafo 3 */
+.paragrafo3:hover {
+    color: #ff4081;
+    font-size: 26px;
+}
+
+/*Exercício 6*/
+
+.container {
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.container img {
+    width: 400px;
+    height: 300px;
+    transition: transform 0.6s ease;
+}
+
+/*Exercício 7*/
+
+/* Efeito de zoom ao passar o mouse */
+.container:hover img {
+    transform: scale(1.15);
+}
+
+.menu {
+    background-color: #ffe6c6;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: inline-block;
+    margin: 0 25px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #5f3e00;
+    font-size: 18px;
+    position: relative;
+    transition: color 0.4s ease;
+}
+
+/* Linha animada (underline) */
+.menu a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background-color: #ff9100;
+    transition: width 0.4s ease;
+}
+
+/* Efeitos ao passar o mouse */
+.menu a:hover {
+    color: #ff9900;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
