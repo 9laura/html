@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 200px;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 60px;
+  z-index: 10;
+}
+
+.logo img {
+  gap: 50px;
+  padding-right: 10px;
+  width: 150px;
+}
+
+.nome {
+  font-size: 2em;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 1px;
+  position: relative;
+  transition: 0.3s;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -4px;
+  left: 0;
+  background: white;
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* CARROSSEL */
+.carousel {
+opacity: 1;
+  padding-top: 200px;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+  position: relative;
+  margin-top: 90px;
+}
+
+.slides {
+  width: 5000px;
+  height: 100px;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 20%;
+  transition: 1s;
+}
+
+.slide img {
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
+  filter: brightness(0.8);
+}
+
+/* Navegação manual */
+.navigation-manual {
+  position: absolute;
+  width: 100%;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.manual-btn {
+  border: 1px solid white;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.manual-btn:hover {
+  background: white;
+}
+
+/* Muda os slides */
+#radio1:checked ~ .first {margin-left: 0;}
+#radio2:checked ~ .first {margin-left: -20%;}
+#radio3:checked ~ .first {margin-left: -40%;}
+#radio4:checked ~ .first {margin-left: -60%;}
+#radio5:checked ~ .first {margin-left: -80%;}
+
+/* DESTAQUE */
+.destaque {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 120px 100px;
+  gap: 60px;
+}
+
+.texto {
+  flex: 1;
+}
+
+.texto h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.texto p {
+  color: #ccc;
+  margin-bottom: 25px;
+  max-width: 500px;
+}
+
+.texto button {
+  background: transparent;
+  color: #fff;
+  border-radius: 35px;
+  border: 2px solid white;
+  padding: 12px 30px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.texto button:hover {
+  background: white;
+  color: black;
+  transform: scale(1.05);
+}
+
+
+.img img {
+  width: 600px;
+  border-radius: 15px;
+  transition: 0.5s;
+  filter: grayscale(40%);
+}
+
+.img img:hover {
+  transform: scale(1.02);
+  filter: grayscale(0);
+}
+
+/* CARDS */
+.middle {
+  text-align: center;
+  font-size: 2.5em;
+  margin-top: 80px;
+  margin-bottom: -40px;
+  letter-spacing: 2px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px;
+  padding: 100px 80px;
+}
+
+.card {
+  background: #111;
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  transition: 0.4s;
+}
+
+.card img {
+  filter: grayscale(100%);
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  opacity: 0.4;
+  transition: 0.4s;
+}
+
+.card h3 {
+  padding: 25px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #bbb;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(255,255,255,0.1);
+}
+
+.card:hover img {
+    filter: none;
+  opacity: 1;
+}
+
+.card:hover h3 {
+  color: white;
+}
+
+/* FOOTER */
+footer {
+  background: #000;
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 1px solid #222;
+}
+
+footer p {
+  color: #888;
+  margin-bottom: 15px;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 25px;
+}
+
+footer a {
+  color: #888;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+footer a:hover {
+  color: #fff;
+  text-shadow: 0 0 8px white;
+}

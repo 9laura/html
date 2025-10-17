@@ -68,7 +68,7 @@ nav a:hover::after {
     justify-content: space-around;
     align-items: center;
     padding: 80px 60px;
-    background: radial-gradient(circle at top left, #1a1a1a, #000);
+    background: radial-gradient(circle at top left, #ffffff, #ffffff);
 }
 
 .texto {
@@ -77,7 +77,7 @@ nav a:hover::after {
 
 .texto h1 {
     font-size: 2.8em;
-    color: #ff3392;
+    color: #ff8ac0;
     margin-bottom: 20px;
     text-shadow: 0 0 15px rgba(255, 51, 204, 0.5);
 }
@@ -107,6 +107,10 @@ button:hover {
 
 /* Imagem principal */
 .principal img {
+    object-fit: cover;
+    width: 400px;
+    height: 300px;
+    filter: grayscale(100%);
     width: 420px;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(255, 0, 150, 0.2);
@@ -114,6 +118,8 @@ button:hover {
 }
 
 .principal img:hover {
+    
+    filter: grayscale(100%);
     transform: scale(1.07);
 }
 
@@ -158,7 +164,7 @@ button:hover {
 
 /* Rodapé */
 footer {
-    background-color: #000;
+    background-color: #ffffff;
     color: #ff99d1;
     padding: 25px;
     text-align: center;
