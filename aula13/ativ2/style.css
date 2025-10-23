@@ -2,13 +2,15 @@
     width: 100px;
     height: 100px;
     background-color: rgb(255, 0, 0);
-    border-radius: 50%;
+
     animation-name: movimento;
     animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     margin-top: 50px;
     position: relative;
+    margin: 20px;
+    
 }
 
 @keyframes movimento {
@@ -27,6 +29,7 @@
 }
 
 .quadrado2 {
+    margin: 20px;
     width: 100px;
     height: 100px;
     background-color: rgb(255, 0, 0);
@@ -56,6 +59,7 @@
 }
 
 .animar-btn {
+    margin: 20px;
     border-radius: 100%;
     padding: 15px 30px;
     font-size: 18px;
@@ -83,6 +87,7 @@
 }
 
 .piscar {
+    margin: 20px;
     font-size: 30px;
     animation: piscar 2s infinite;
 }
@@ -94,31 +99,44 @@
 }
 
 .caixa {
+    margin: 20px;
     width: 200px;
     height: 200px;
     border: 2px solid black;
     overflow: hidden;
+    animation-name: anoitecer;
     background: skyblue;
     position: relative;
+    
+    animation: anoitecer 3s infinite alternate;
+
+}
+@keyframes anoitecer {
+    0% {  background-color: #00026d; }
+    50% { background-color: skyblue;}
 }
 
 .sol {
+    margin: 20px;
     width: 80px;
     position: absolute;
     bottom: -100px;
-    left: 50%;
+    animation-name: nascer;
+    left: 40%;
     transform: translateX(-50%);
     animation: nascer 3s infinite alternate;
 }
 
 @keyframes nascer {
     0% { bottom: -100px; }
-    100% { bottom: 120px; }
+    100% { bottom: 89px;}
 }
 
 .coracao {
+    margin: 20px;
     width: 100px;
     animation: bater 0.8s infinite;
+    display: block;
 }
 
 @keyframes bater {
@@ -127,6 +145,7 @@
 }
 
 .flutuante {
+    margin: 20px;
     font-size: 26px;
     animation: flutuar 3s infinite ease-in-out;
     display: inline-block;
@@ -136,3 +155,5 @@
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-15px); }
 }
+
+
