@@ -1,0 +1,106 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 30px;
+}
+
+/* -------- Exercício 1 -------- */
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn1 { background: crimson; }
+.btn2 { background: teal; }
+.btn3 { background: darkorange; }
+
+.btn1:hover { background: tomato; }
+.btn2:hover { background: turquoise; }
+.btn3:hover { background: gold; }
+
+/* -------- Exercício 2 -------- */
+.clicavel {
+  background: purple;
+  transition: transform 0.1s;
+}
+
+.clicavel:active {
+  transform: scale(0.9);
+}
+
+/* -------- Exercício 3 -------- */
+input {
+  display: block;
+  margin: 8px 0;
+  padding: 8px;
+  border: 2px solid gray;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: dodgerblue;
+  box-shadow: 0 0 6px dodgerblue;
+}
+
+/* -------- Exercício 4 -------- */
+.card {
+  width: 220px;
+  padding: 15px;
+  border-radius: 10px;
+  background: #f1f1f1;
+  text-align: center;
+  transition: 0.4s;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+  background: #e8e8e8;
+}
+
+/* -------- Exercício 5 -------- */
+.galeria {
+  display: flex;
+  gap: 10px;
+}
+
+.galeria img {
+  width: 200px;
+  transition: 0.5s;
+}
+
+.galeria img:hover {
+  filter: grayscale(100%);
+}
+
+/* -------- Exercício 6 -------- */
+.botao-estados {
+  background: gray;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.botao-estados:hover {
+  background: lightblue;
+}
+
+.botao-estados:active {
+  background: darkblue;
+  transform: scale(0.9);
+}
+
+.botao-estados:focus {
+  outline: 3px solid black;
+}
