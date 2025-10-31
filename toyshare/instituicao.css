@@ -1,0 +1,251 @@
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+* {
+margin: 0;
+padding: 0;
+border: 0;
+overflow-x: hidden;
+}
+header{
+    background-image: url(imagens/CapaHeader.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    z-index: 0;
+    height: 270px;
+    width: auto;
+    /* Configuração logo no centro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.headerFundo{
+    position: relative;
+    z-index: 0;
+}
+.logoHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    position: absolute;
+    z-index: 3;
+    width: 350px;
+    height: 350px;
+    margin-top: -150px;
+}
+
+.nav{
+    padding: 40px;
+    width: 100vw;
+    background-color: #ffdb70;
+    display: flex;
+}
+.inicio,.institu,.doe{
+    width: 250px;
+    height: 50px;
+    border-radius: 50px;
+    scale: 1.0;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: white;
+    color: #3e61a3;
+    transition: 0.3s ease-in-out;
+}
+.inicio:hover,.institu:hover,.doe:hover{
+    background-color: #3e61a3;
+    color: #fff;
+}
+.inicio:active,.institu:active,.doe:active{
+    transform: scale(0.9);
+}
+.left{
+    display: flex;
+    justify-content: space-around;
+    width: 50vw;
+    margin-right: 50px;
+}
+.right{
+    display: flex;
+    justify-content: space-around;
+    width: 50vw;
+    margin-right: 50px;
+}
+
+.doe{
+    margin-right: 80px;
+}
+.cadastrar,.sobre,.contato{
+    width: 250px;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: white;
+    color: #3e61a3;
+    transition: 0.3s ease-in-out;
+}
+.cadastrar {
+    margin-left: 70px;
+}
+.cadastrar:hover,.sobre:hover,.contato:hover{
+    background-color: #3e61a3;
+    color: #fff;
+
+}
+.cadastrar:active,.sobre:active,.contato:active{
+    transform: scale(0.9);
+}
+
+
+.principal {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+    font-size: 50px;
+}
+
+
+
+.inst1 {
+    display: flex;
+    flex-wrap: in-line;
+    height: 390px;
+    justify-content: space-around;
+    display: inline-flexbox;
+    border-radius: 50px;
+    margin-top: 40px;
+    width: 1000px;
+    background-color: rgb(118, 192, 226);
+    color: #ffffff;
+    
+}
+
+.i1 {
+    width: 350px;
+    height: 340px;
+    border-radius: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 50px;
+}
+
+.palavras1 {
+    margin-left: 10px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.p1 {
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+.ins1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: white;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 25px;
+}
+
+.pal1 {
+    border-radius: 30px;
+    margin-top: 25px;
+    width: 300px;
+    height: 50px;
+    transition: 1s ease;
+    scale: 1.0;
+    background-color: rgb(115, 209, 253);
+}
+
+.pal1:hover {
+    background-color: rgb(186, 212, 228);
+}
+.pal1:active {
+    transform: scale(0.9);
+}
+
+.paldoacao {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+
+
+
+
+
+
+.inst2 {
+    display: flex;
+    flex-wrap: in-line;
+    height: 390px;
+    justify-content: space-around;
+    display: inline-flexbox;
+    border-radius: 50px;
+    margin-top: 40px;
+    width: 1000px;
+    background-color: rgb(174, 118, 211);
+}
+
+.i2 {
+    width: 350px;
+    height: 340px;
+    border-radius: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 50px;
+}
+.palavras2 {
+    margin-left: 10px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.p2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: white;
+}
+.ins2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 25px;
+    color: white;
+}
+.pal2 {    border-radius: 30px;
+    margin-top: 25px;
+    width: 300px;
+    height: 50px;
+    transition: 1s ease;
+    scale: 1.0;
+    color: white;
+    background-color: rgb(211, 153, 250);
+}
+
+.pal2:hover {    background-color: rgb(211, 153, 250);
+}
+.pal2:active {
+    transform: scale(0.9);
+}

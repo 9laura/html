@@ -1,0 +1,174 @@
+
+* {
+margin: 0;
+padding: 0;
+border: 0;
+overflow-x: hidden;
+font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    background-image: url(imagens/CapaHeader.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    z-index: 0;
+    height: 270px;
+    width: auto;
+    /* Configuração logo no centro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.headerFundo{
+    position: relative;
+    z-index: 0;
+}
+.logoHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    position: absolute;
+    z-index: 3;
+    width: 350px;
+    height: 350px;
+    margin-top: -150px;
+}
+
+.nav{
+    padding: 30px;
+    width: 100vw;
+    background-color: #ffdb70;
+    display: flex;
+}
+.inicio,.institu,.doe{
+    width: 250px;
+    height: 50px;
+    border-radius: 50px;
+    scale: 1.0;
+    font-size: 17px;
+    font-weight: 700;
+    background-color: white;
+    color: #3e61a3;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/*  #ffdb70 */
+
+
+.inicio:hover,.institu:hover,.doe:hover{
+    background-color: #3e61a3;
+    color: #fff;
+}
+.inicio:active,.institu:active,.doe:active{
+    transform: scale(0.9);
+}
+.left{
+    display: flex;
+    justify-content: space-around;
+    width: 50vw;
+    height: 70px;
+    margin-right: 50px;
+}
+.right{
+    display: flex;
+    justify-content: space-around;
+    width: 50vw;
+    height: 70px;
+    margin-right: 50px;
+}
+
+.doe{
+    margin-right: 80px;
+}
+.cadastrar,.sobre,.contato{
+    width: 250px;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: white;
+    color: #3e61a3;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.cadastrar {
+    margin-left: 70px;
+}
+.cadastrar:hover,.sobre:hover,.contato:hover{
+    background-color: #3e61a3;
+    color: #fff;
+
+}
+.cadastrar:active,.sobre:active,.contato:active{
+    transform: scale(0.9);
+}
+.titulo{
+    text-align: center;
+}
+.buscar{
+    border-radius: 50px;
+    background-color: #ff914d;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.doeSeuBrinquedo{
+    color: #3e61a3;
+    font-size: 30px;
+    margin: 30px;
+}
+.btVoltar{
+    width: 250px;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: white;
+    color: #3e61a3;
+    transition: 0.3s ease-in-out;
+    margin: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.btVoltar:hover{
+     background-color: #3e61a3;
+    color: #fff;
+}
+.botaoVoltar{
+    text-align: center;
+}
+h2{
+    color: #ffffff;
+    font-size: 30px;
+    margin: 30px;
+}
+.menuSuspensoEstado,.menuSuspensoCidade,.boxCep,.boxData{
+    margin: 50px;
+}
+.estado{
+    width: 100%;
+    height: 35px;
+    border-radius: 10px;
+    font-size: 20px;
+    
+}
+.estado:focus{
+    border: 2px solid #3e61a3;
+}
+h3{
+    color: white;
+}
+main{
+    background-image: url(imagens/imagem\ background.png);
+}
+.cep,.data,.cidade{
+    width: 100%;
+    height: 35px;
+    border-radius: 30px;
+    font-size: 20px;
+}
+.disponibilidade{
+    text-align: center;
+}
