@@ -1,22 +1,103 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria com Hover</title>
-    <link rel="stylesheet" href="style.css"> <!-- linka o CSS externo -->
-</head>
-<body>
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Introdução — Seu Site</title>
+    <meta name="description" content="Introdução moderna e fluida do site com animações e sombras." />
+    <meta name="theme-color" content="#0ea5e9" />
 
-    <h1>Minha Galeria de Fotos</h1>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-    <div class="galeria">
-        <img src="https://i.pinimg.com/736x/1b/92/45/1b924523a149dc464c12c6d894ef7d3b.jpg" alt="Imagem 1">
-        <img src="https://i.pinimg.com/1200x/3d/11/61/3d116165c3ef6b813ba224d6b2ceb4ba.jpg" alt="Imagem 2">
-        <img src="https://i.pinimg.com/736x/e3/39/75/e3397561670120250eec7e7870b6cb14.jpg" alt="Imagem 3">
-        <img src="https://i.pinimg.com/736x/6a/47/9e/6a479eb2464e2b860ff63279288e8714.jpg" alt="Imagem 4">
-        <img src="https://i.pinimg.com/736x/3b/07/48/3b0748d551b3861ee9a4b760af8aa02e.jpg" alt="Imagem 5">
-    </div>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" role="banner">
+      <div class="container nav-bar">
+        <a class="logo" href="index.html" aria-label="Voltar ao início">Seu<span>Site</span></a>
+        <nav class="nav" aria-label="Navegação principal">
+          <a class="nav-link" href="sobre.html">Sobre</a>
+          <a class="nav-link" href="servicos.html">Serviços</a>
+          <a class="nav-link" href="portfolio.html">Portfólio</a>
+          <a class="nav-link" href="contato.html">Contato</a>
+        </nav>
+      </div>
+    </header>
 
-</body>
+    <main id="conteudo" class="site-main" role="main">
+      <section class="hero">
+        <div class="container hero-inner">
+          <h1 class="hero-title">Bem-vindo ao <span>Seu Site</span></h1>
+          <p class="hero-subtitle">Uma introdução moderna, fluida e com animações sutis.</p>
+          <a class="cta-button" href="sobre.html" target="_blank" rel="noopener" aria-label="Começar aqui (abre em nova aba)">Começar aqui</a>
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <div class="container grid">
+          <article class="card">
+            <h3>Espaço para texto</h3>
+            <p>Conte sua história com destaque, com tipografia fluida e legível.</p>
+          </article>
+          <article class="card">
+            <h3>Espaço para imagens</h3>
+            <div class="media-placeholder" aria-hidden="true"></div>
+            <p>Mostre imagens com sombras suaves e bordas arredondadas.</p>
+          </article>
+          <article class="card">
+            <h3>Bloco personalizável</h3>
+            <p>Adapte para depoimentos, métricas ou o que fizer sentido para você.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="container two-col">
+          <div class="text">
+            <h2>Título de seção</h2>
+            <p>Este espaço comporta descrições maiores, listas e chamadas secundárias. O layout se adapta a qualquer tela com transições suaves.</p>
+          </div>
+          <div class="media">
+            <div class="media-placeholder" aria-hidden="true"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="container two-col">
+          <div class="media">
+            <div class="media-placeholder" aria-hidden="true"></div>
+          </div>
+          <div class="text">
+            <h2>Espaço para imagens e texto</h2>
+            <p>Intercale conteúdos para criar ritmo visual, usando sombras e animações leves ao carregar.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="container two-col">
+          <div class="text">
+            <h2>Mais conteúdo</h2>
+            <p>Adicione cards, galerias, FAQs, ou qualquer outro bloco conforme sua necessidade.</p>
+          </div>
+          <div class="media">
+            <div class="media-placeholder" aria-hidden="true"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container footer-inner">
+        <p>© 2025 Seu Site. Todos os direitos reservados.</p>
+        <div class="footer-links">
+          <a href="contato.html">Fale conosco</a>
+          <a href="portfolio.html">Portfólio</a>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
