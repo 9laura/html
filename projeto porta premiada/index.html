@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Expresso de Hogwarts</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            font-family: 'quicksand', sans-serif;
+        }
+        .container {
+           display: flex;
+     justify-content: center;
+            gap: 20px;
+     margin-top: 50px;
+    }
+    .porta {
+            width: 220px;
+            height: 320px;
+            cursor: pointer;
+            border: 4px solid #ffffff;
+            border-radius: 15px;
+            object-fit: cover;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .porta:hover {
+            border-color: #ffffff;
+            transform: scale(1.05);
+        }
+        #mensagem {
+            font-size: 26px;
+            margin-top: 40px;
+            font-weight: medium;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 25px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        h1 {
+            font-size: 32px;
+            margin-top: 30px;
+            font-weight: medium;
+            font-family: quicksand, sans-serif;
+ }
+    </style>
+</head>
+<body>
+
+    <h1>Escolha sua porta para o trem de Hogwarts!</h1>
+    
+        <img src="portahogwarts.jpg" id="p1" class="porta" onclick="jogar(1)">
+        <img src="portahogwarts.jpg" id="p2" class="porta" onclick="jogar(2)">
+        <img src="portahogwarts.jpg" id="p3" class="porta" onclick="jogar(3)">
+    
+
+    <p id="mensagem">Qual escolha você fará?</p>
+    
+    <button onclick="location.reload()">Reiniciar Jogo</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
