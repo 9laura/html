@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Play - Loja de Jogos Antigos e Clássicos</title>
+ 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="audio-control-bar">
+        <button id="sound-toggle-btn" class="retro-btn sound-btn" aria-label="Ativar som 8-bit">
+            <i class="fas fa-volume-mute"></i> <span>MUDO</span>
+        </button>
+    </div>
+
+    <header class="retro-header">
+        <div class="header-container">
+            <a href="#" class="logo-link">
+                <img src="img/logo.png" alt="Retro Play Logo" class="retro-logo">
+            </a>
+            
+            <div class="search-wrapper">
+                <div class="search-bar">
+                    <input type="text" id="game-search" placeholder="Buscar jogos clássicos (ex: Mario)..." autocomplete="off">
+                    <button id="search-btn" class="search-icon-btn" aria-label="Buscar">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+
+                <div id="search-results" class="search-results-dropdown hidden"></div>
+            </div>
+            <nav class="retro-nav">
+                <ul class="nav-links">
+                    <li><a href="#hero" class="nav-link">Início</a></li>
+                    <li><a href="#destaques" class="nav-link">Jogos</a></li>
+                    <li><a href="#sorteio" class="nav-link">Sorteio</a></li>
+                    <li><a href="#faq" class="nav-link">FAQ</a></li>
+                    <li><a href="#contato" class="nav-link">Onde Estamos</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Menu" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="mobile-nav hidden" id="mobile-nav">
+        <ul class="mobile-nav-links">
+            <li><a href="#hero" class="mobile-link">Início</a></li>
+            <li><a href="#destaques" class="mobile-link">Jogos</a></li>
+            <li><a href="#sorteio" class="mobile-link">Sorteio</a></li>
+            <li><a href="#faq" class="mobile-link">FAQ</a></li>
+            <li><a href="#contato" class="mobile-link">Onde Estamos</a></li>
+        </ul>
+    </div>
+
+    <main>
+        
+        <section id="hero" class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">AV. SÃO JOÃO, 1476</div>
+                    <h1 class="hero-title">O TEMPLO DOS <br><span class="highlight-text">JOGOS ANTIGOS</span></h1>
+                    <p class="hero-subtitle">Volte no tempo com os maiores clássicos dos videogames. Street Fighter, Mario, Tetris e muito mais em um só lugar. Visite-nos em Santa Cecília, São Paulo!</p>
+                    <div class="hero-actions">
+                        <a href="#sorteio" class="retro-btn btn-primary btn-shake">
+                            <span class="btn-inner">PARTICIPAR DO SORTEIO</span>
+                        </a>
+                        <a href="#destaques" class="retro-btn btn-secondary">
+                            <span class="btn-inner">VER JOGOS</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-graphic">
+                    <div class="arcade-cabinet-mini">
+                        <div class="arcade-screen-mini">
+                            <div class="crt-scanlines"></div>
+                            <div class="marquee-mini">INSERT COIN</div>
+                            <div class="game-demo-gif">
+                                <div class="pixel-cube"></div>
+                                <div class="pixel-cube-2"></div>
+                            </div>
+                        </div>
+                        <div class="arcade-panel-mini">
+                            <span class="arcade-joystick"></span>
+                            <span class="arcade-button red"></span>
+                            <span class="arcade-button blue"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pixel-divider"></div>
+        </section>
+        <!-- Destaques -->
+        <section id="destaques" class="destaques-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title"><i class="fas fa-gamepad"></i> JOGOS EM DESTAQUE</h2>
+                    <p class="section-subtitle">Os cartuchos lendários e os discos que marcaram gerações esperam por você.</p>
+                </div>
+                <!-- CRT  -->
+                <div class="crt-showcase">
+                    <div class="crt-controls-top">
+                        <span class="crt-brand">RETRO-O-VISION 2000</span>
+                        <div class="crt-power-indicator-container">
+                            <span class="crt-power-label">POWER</span>
+                            <span class="crt-power-led active"></span>
+                        </div>
+                    </div>
+                    <!-- Telinha -->
+                    <div class="crt-tv-body">
+                        <div class="crt-screen-container">
+                            <!-- Toggle individual de CRT scanlines -->
+                            <div id="crt-scanlines-effect" class="crt-scanlines"></div>
+                            
+                            <!-- Carrossel Slides -->
+                            <div class="carousel-container">
+                                <!-- Slide 1: Mario -->
+                                <div class="carousel-slide active" data-game-index="0" data-game-name="Super Mario World">
+                                    <div class="slide-content">
+                                        <div class="slide-image-container">
+                                            <img src="img/mario.jpg" alt="Super Mario World" class="slide-img">
+                                        </div>
+                                        <div class="slide-info">
+                                            <span class="game-tag platform-snes">SNES</span>
+                                            <h3 class="game-title">Super Mario World</h3>
+                                            <p class="game-year">Ano de Lançamento: 1990</p>
+                                            <p class="game-desc">A maior aventura de Mario na Terra dos Dinossauros! Explore 74 mundos cheios de segredos, apresentando o adorável Yoshi pela primeira vez. Um clássico insuperável de plataforma.</p>
+                                            <div class="game-status">Disponível em Cartucho original</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Slide 2: Street Fighter -->
+                                <div class="carousel-slide" data-game-index="1" data-game-name="Street Fighter II">
+                                    <div class="slide-content">
+                                        <div class="slide-image-container">
+                                            <img src="img/street_fighter.jpg" alt="Street Fighter II" class="slide-img">
+                                        </div>
+                                        <div class="slide-info">
+                                            <span class="game-tag platform-arcade">ARCADE</span>
+                                            <h3 class="game-title">Street Fighter II</h3>
+                                            <p class="game-year">Ano de Lançamento: 1991</p>
+                                            <p class="game-desc">O jogo que definiu o gênero de luta competitiva. Escolha seu lutador favorito de diferentes partes do mundo, domine os golpes especiais como o Hadouken e derrote M. Bison!</p>
+                                            <div class="game-status">Fliperama disponível para jogar na loja</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Slide 3: Tetris -->
+                                <div class="carousel-slide" data-game-index="2" data-game-name="Tetris">
+                                    <div class="slide-content">
+                                        <div class="slide-image-container">
+                                            <img src="img/tetris.jpg" alt="Tetris" class="slide-img">
+                                        </div>
+                                        <div class="slide-info">
+                                            <span class="game-tag platform-gb">GAME BOY</span>
+                                            <h3 class="game-title">Tetris</h3>
+                                            <p class="game-year">Ano de Lançamento: 1989</p>
+                                            <p class="game-desc">O quebra-cabeça viciante que conquistou o mundo! Organize os blocos geométricos descendentes para limpar linhas completas. A trilha sonora marcante e a jogabilidade são eternas.</p>
+                                            <div class="game-status">Disponível em várias plataformas retro</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Slide 4: Sonic -->
+                                <div class="carousel-slide" data-game-index="3" data-game-name="Sonic the Hedgehog">
+                                    <div class="slide-content">
+                                        <div class="slide-image-container">
+                                            <img src="img/sonic.jpg" alt="Sonic the Hedgehog" class="slide-img">
+                                        </div>
+                                        <div class="slide-info">
+                                            <span class="game-tag platform-mega">MEGA DRIVE</span>
+                                            <h3 class="game-title">Sonic the Hedgehog</h3>
+                                            <p class="game-year">Ano de Lançamento: 1991</p>
+                                            <p class="game-desc">O mascote azul mais veloz dos games. Atravesse a Green Hill Zone em alta velocidade acumulando anéis dourados e impeça os planos malignos do Dr. Robotnik para salvar os animais.</p>
+                                            <div class="game-status">Console e cartucho disponíveis</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- TV -->
+                        <div class="crt-tv-controls">
+                            <div class="crt-dial dial-channel">
+                                <div class="dial-inner"></div>
+                                <span class="dial-label">CH</span>
+                            </div>
+                            <div class="crt-dial dial-volume">
+                                <div class="dial-inner"></div>
+                                <span class="dial-label">VOL</span>
+                            </div>
+                            <div class="crt-toggle-crt-btn">
+                                <button id="crt-toggle-btn" class="crt-switch-btn" aria-label="Alternar Efeito CRT">
+                                    <span class="switch-nob"></span>
+                                </button>
+                                <span class="switch-label">CRT LINES</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Carrossel -->
+                    <div class="carousel-nav-buttons">
+                        <button id="carousel-prev" class="arcade-nav-btn btn-left" aria-label="Slide anterior">
+                            <span class="btn-cap"><i class="fas fa-chevron-left"></i></span>
+                        </button>
+                        <div class="carousel-indicators">
+                            <span class="coin-indicator active" data-slide-to="0" title="Slide 1"><i class="fas fa-circle-notch"></i></span>
+                            <span class="coin-indicator" data-slide-to="1" title="Slide 2"><i class="fas fa-circle-notch"></i></span>
+                            <span class="coin-indicator" data-slide-to="2" title="Slide 3"><i class="fas fa-circle-notch"></i></span>
+                            <span class="coin-indicator" data-slide-to="3" title="Slide 4"><i class="fas fa-circle-notch"></i></span>
+                        </div>
+                        <button id="carousel-next" class="arcade-nav-btn btn-right" aria-label="Próximo slide">
+                            <span class="btn-cap"><i class="fas fa-chevron-right"></i></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Sorteio -->
+        <section id="sorteio" class="sorteio-section">
+            <div class="container">
+                <div class="sorteio-grid">
+                    <div class="sorteio-info">
+                        <div class="sorteio-badge"><i class="fas fa-ticket-alt"></i> EVENTO ESPECIAL</div>
+                        <h2 class="sorteio-title">SORTEIOS SEMANAIS <br><span class="highlight-orange">DE CONSOLES & JOGOS!</span></h2>
+                        <p class="sorteio-text">Quer levar um console clássico completo para casa ou faturar cartuchos raros dos seus jogos favoritos? Inscreva-se gratuitamente no nosso sorteio promocional!</p>
+                        <ul class="sorteio-benefits">
+                            <li><i class="fas fa-check-circle"></i> Sorteio de 1 console clássico (NES/Mega Drive) todo mês.</li>
+                            <li><i class="fas fa-check-circle"></i> Vouchers de compra na loja física.</li>
+                            <li><i class="fas fa-check-circle"></i> Eventos presenciais exclusivos aos sábados na loja da Av. São João.</li>
+                        </ul>
+                    </div>
+                    <div class="sorteio-card-wrapper">
+                        <!-- Fliperama Card Input -->
+                        <div class="arcade-form-card">
+                            <div class="card-header-pixel">
+                                <h3>REGISTRAR JOGADOR</h3>
+                                <span class="insert-coin-text blink">INSIRA SEUS DADOS</span>
+                            </div>
+                            
+                            <form id="raffle-form" class="retro-form" novalidate>
+                                <div class="form-group">
+                                    <label for="user-name">Nome Completo</label>
+                                    <div class="input-wrapper">
+                                        <i class="fas fa-user input-icon"></i>
+                                        <input type="text" id="user-name" name="name" placeholder="Digite seu nome..." required>
+                                    </div>
+                                    <span class="error-message" id="name-error"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="user-email">E-mail de Contato</label>
+                                    <div class="input-wrapper">
+                                        <i class="fas fa-envelope input-icon"></i>
+                                        <input type="email" id="user-email" name="email" placeholder="exemplo@email.com" required>
+                                    </div>
+                                    <span class="error-message" id="email-error"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="user-phone">Celular (WhatsApp)</label>
+                                    <div class="input-wrapper">
+                                        <i class="fas fa-mobile-alt input-icon"></i>
+                                        <input type="tel" id="user-phone" name="phone" placeholder="(11) 99999-9999" maxlength="15" required>
+                                    </div>
+                                    <span class="error-message" id="phone-error"></span>
+                                </div>
+                                <button type="submit" class="retro-btn btn-submit btn-shake">
+                                    <span class="btn-inner"><i class="fas fa-coins"></i> REGISTRAR PARA SORTEIO</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title"><i class="fas fa-question-circle"></i> DÚVIDAS FREQUENTES</h2>
+                    <p class="section-subtitle">Tudo o que você precisa saber sobre a nossa loja, cartuchos e sorteios.</p>
+                </div>
+                <div class="faq-accordion-container">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item">
+                        <button class="faq-question-btn" aria-expanded="false" aria-controls="faq-answer-1">
+                            <span class="faq-title">Como funcionam os sorteios?</span>
+                            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                        </button>
+                        <div id="faq-answer-1" class="faq-answer" hidden>
+                            <p>Ao se cadastrar pelo site com Nome, E-mail e Celular, você receberá um número da sorte por e-mail e WhatsApp. Os sorteios são realizados no último sábado de cada mês, ao vivo em nossa loja física na Av. São João e transmitidos nas redes sociais.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item">
+                        <button class="faq-question-btn" aria-expanded="false" aria-controls="faq-answer-2">
+                            <span class="faq-title">Os jogos e consoles possuem garantia?</span>
+                            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                        </button>
+                        <div id="faq-answer-2" class="faq-answer" hidden>
+                            <p>Sim! Todos os nossos consoles clássicos passam por higienização completa, recapagem eletrônica se necessário, testes rigorosos e possuem garantia de 90 dias. Os cartuchos originais também possuem garantia de funcionamento de 30 dias.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item">
+                        <button class="faq-question-btn" aria-expanded="false" aria-controls="faq-answer-3">
+                            <span class="faq-title">A loja física compra ou troca jogos antigos?</span>
+                            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                        </button>
+                        <div id="faq-answer-3" class="faq-answer" hidden>
+                            <p>Com certeza! Avaliamos seus cartuchos, videogames e acessórios antigos. Você pode vendê-los diretamente para nós ou trocá-los por outros itens da loja física como crédito de troca.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 4 -->
+                    <div class="faq-item">
+                        <button class="faq-question-btn" aria-expanded="false" aria-controls="faq-answer-4">
+                            <span class="faq-title">Vocês fazem envios para todo o Brasil?</span>
+                            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                        </button>
+                        <div id="faq-answer-4" class="faq-answer" hidden>
+                            <p>Embora nosso foco principal seja o atendimento em nossa aconchegante loja física em Santa Cecília (onde você pode testar tudo antes de comprar), também realizamos envios nacionais via Correios e transportadoras. Fale conosco no WhatsApp!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contato" class="contato-section">
+            <div class="container">
+                <div class="contato-grid">
+                    <div class="map-card-wrapper">
+                        <div class="map-frame">
+                            <div class="crt-scanlines"></div>
+
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.8770732389184!2d-46.65345712467041!3d-23.536928878816405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce583f7422998f%3A0xe5433ec09f4fb8e9!2sAv.%20S%C3%A3o%20Jo%C3%A3o%2C%201476%20-%20Santa%20Cec%C3%ADlia%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001211-200!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" 
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Localização da Retro Play na Av. São João">
+                            </iframe>
+                        </div>
+                    </div>
+                    <div class="contato-info-card">
+                        <span class="info-badge">COMO CHEGAR</span>
+                        <h2 class="info-title">NOSSA LOJA FÍSICA</h2>
+                        <div class="info-details-list">
+                            <div class="info-detail-item">
+                                <i class="fas fa-map-marker-alt info-icon"></i>
+                                <div>
+                                    <h4>Endereço</h4>
+                                    <p>Av. São João, 1476 - Santa Cecília<br>São Paulo - SP, CEP 01211-200</p>
+                                </div>
+                            </div>
+                            <div class="info-detail-item">
+                                <i class="fas fa-clock info-icon"></i>
+                                <div>
+                                    <h4>Horário de Funcionamento</h4>
+                                    <p>Segunda a Sexta: 10h às 19h<br>Sábados: 09h às 18h</p>
+                                </div>
+                            </div>
+                            <div class="info-detail-item">
+                                <i class="fas fa-phone-alt info-icon"></i>
+                                <div>
+                                    <h4>Contatos</h4>
+                                    <p>WhatsApp: (11) 98888-7777<br>E-mail: contato@retroplayloja.com.br</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-action-buttons">
+                            <a href="https://maps.google.com/?q=Av.+São+João,+1476+-+Santa+Cecília,+São+Paulo" target="_blank" rel="noopener noreferrer" class="retro-btn btn-secondary btn-full">
+                                <span class="btn-inner"><i class="fas fa-directions"></i> ABRIR NO GOOGLE MAPS</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="success-modal" class="modal-overlay hidden">
+        <div class="modal-card">
+            <div class="modal-header-retro">
+                <span class="modal-title-pixel">JOGADOR REGISTRADO!</span>
+                <button id="close-modal-btn" class="modal-close-btn">&times;</button>
+            </div>
+            <div class="modal-body-retro">
+                <div class="ticket-graphic">
+                    <div class="ticket-stub">
+                        <span>RETRO</span>
+                        <span>PLAY</span>
+                    </div>
+                    <div class="ticket-body">
+                        <div class="ticket-title">BILHETE DE SORTEIO</div>
+                        <div class="ticket-user-info">
+                            <p><strong>NOME:</strong> <span id="modal-user-name">Felipe Silva</span></p>
+                            <p><strong>NÚMERO DA SORTE:</strong> <span class="lucky-number" id="modal-lucky-number">#99281-SF</span></p>
+                        </div>
+                        <div class="ticket-footer-text">apresente na loja física ou redes sociais</div>
+                    </div>
+                </div>
+                <p class="modal-description">Ficha inserida com sucesso! Enviamos a confirmação do sorteio com os detalhes para o seu e-mail e celular.</p>
+                <div class="modal-actions-retro">
+                    <button id="close-modal-confirm" class="retro-btn btn-primary">
+                        <span class="btn-inner">MUITO BOM!</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="retro-footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <img src="img/logo.png" alt="Retro Play Logo" class="footer-logo-img">
+                <p>Trazer de volta a magia dos jogos que marcaram épocas.</p>
+            </div>
+            <div class="footer-socials">
+                <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="social-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Retro Play, Laura Flor. Desenvolvido com estilo retro 8-bit. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
