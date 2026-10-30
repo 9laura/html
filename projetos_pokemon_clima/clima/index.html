@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clima Agora</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div class="marca"><span>☀</span> Clima<span class="marca-clara">Agora</span></div>
+      <p>Veja como está o tempo e planeje sua semana.</p>
+    </header>
+
+    <form id="formBusca" class="busca">
+      <label for="cidadeInput">Buscar cidade</label>
+      <div class="busca-linha">
+        <input id="cidadeInput" type="text" placeholder="Digite uma cidade (ex: São Paulo)" required>
+        <button type="submit">Pesquisar</button>
+      </div>
+    </form>
+
+    <section id="resultado" class="resultado">
+      <div class="inicio">
+        <div class="sol">☀️</div>
+        <h2>Como está o tempo?</h2>
+        <p>Pesquise uma cidade para ver a temperatura e a previsão dos próximos dias.</p>
+      </div>
+    </section>
+    <footer>ClimaAgora • Informações meteorológicas via Open-Meteo</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

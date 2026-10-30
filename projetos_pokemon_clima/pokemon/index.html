@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokédex</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="pokedex">
+    <header class="topo">
+      <div class="logo"><span class="luz"></span><h1>Pokédex</h1></div>
+      <p>Explore o mundo Pokémon</p>
+    </header>
+
+    <section class="busca">
+      <label for="pokemonInput">Qual Pokémon você procura?</label>
+      <div class="linha-busca">
+        <input id="pokemonInput" type="text" placeholder="Nome ou número (ex: pikachu)" autocomplete="off">
+        <button id="buscarBtn">Buscar</button>
+      </div>
+      <p class="dica">Experimente: pikachu, charizard, bulbasaur...</p>
+    </section>
+
+    <section id="resultado" class="resultado">
+      <div class="placeholder">
+        <div class="pokebola-grande"></div>
+        <h2>Seu próximo Pokémon está aqui!</h2>
+        <p>Digite um nome ou número para começar.</p>
+      </div>
+    </section>
+    <footer>Pokédex • Dados fornecidos pela PokéAPI</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;padding:28px;font-family:Nunito,sans-serif;color:#203047;background:linear-gradient(140deg,#d9edff,#edf4ff 45%,#d7e4ff);display:flex;align-items:center;justify-content:center}
+.app{width:min(100%,980px);background:#fff;border-radius:28px;overflow:hidden;box-shadow:0 25px 70px #4a6c9c25}
+header{padding:30px 36px;background:linear-gradient(120deg,#3478d4,#62b8ed);color:white}
+.marca{font-size:29px;font-weight:800;letter-spacing:-1px}.marca>span:first-child{font-size:32px;margin-right:8px}.marca-clara{font-weight:400}header p{margin:7px 0 0;opacity:.9}
+.busca{padding:24px 36px 28px;background:#f7faff}.busca label{display:block;font-weight:800;margin-bottom:10px}
+.busca-linha{display:flex;gap:12px}.busca input{flex:1;min-width:0;border:2px solid #dce7f4;border-radius:13px;padding:14px 16px;font:inherit;outline:none}.busca input:focus{border-color:#4a91df}
+button{border:0;background:#286fc4;color:white;padding:0 24px;border-radius:13px;font:800 15px Nunito;cursor:pointer;transition:.2s}button:hover{background:#1b559b;transform:translateY(-1px)}
+.resultado{padding:28px 36px 36px;min-height:340px}.inicio{text-align:center;padding:32px 10px;color:#718097}.sol{font-size:60px}.inicio h2{color:#263c59;margin:10px 0}.inicio p{max-width:460px;margin:auto}
+.atual{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;padding:25px 28px;border-radius:22px;background:linear-gradient(120deg,#e6f3ff,#f4f9ff);margin-bottom:25px}.cidade{font-size:14px;font-weight:800;color:#6481a4}.atual h2{font-size:28px;margin:4px 0;text-transform:capitalize}.descricao{text-transform:capitalize;color:#72839a}.temperatura{font-size:58px;font-weight:800;color:#246db8;letter-spacing:-3px}.icone-atual{font-size:65px}
+.semana-titulo{margin:0 0 14px;font-size:20px}.semana{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.dia{background:#f5f8fc;border:1px solid #e7edf5;border-radius:16px;padding:16px 10px;text-align:center}.dia .nome{font-size:12px;font-weight:800;color:#71839b}.dia .icone{font-size:29px;margin:10px 0}.dia .max{font-weight:800;font-size:17px}.dia .min{font-size:13px;color:#8a9ab0;margin-top:3px}
+.erro{padding:18px;border-radius:13px;background:#fff0f0;color:#a52b35;text-align:center}
+footer{text-align:center;padding:16px;color:#9aa8ba;font-size:12px;border-top:1px solid #edf1f6}
+@media(max-width:650px){body{padding:12px}.app{border-radius:20px}header,.busca,.resultado{padding-left:18px;padding-right:18px}.semana{grid-template-columns:repeat(2,minmax(0,1fr))}.atual{padding:18px}.temperatura{font-size:46px}.busca-linha button{padding:0 15px}}

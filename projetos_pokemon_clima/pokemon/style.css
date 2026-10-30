@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Press+Start+2P&display=swap');
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:Nunito,sans-serif;background:linear-gradient(135deg,#202a44,#101522);display:flex;justify-content:center;align-items:center;padding:28px;color:#222}
+.pokedex{width:min(100%,720px);background:#f8f8f8;border:12px solid #d93442;border-radius:28px;overflow:hidden;box-shadow:0 20px 55px #0008}
+.topo{background:#e83e4b;color:white;padding:22px 30px 18px;border-bottom:7px solid #b92332}
+.logo{display:flex;align-items:center;gap:15px}.logo h1{font-family:'Press Start 2P',monospace;font-size:clamp(19px,4vw,30px);margin:0;text-shadow:3px 3px #a51d2b}
+.luz{width:28px;height:28px;border-radius:50%;background:#58c8f4;border:5px solid white;box-shadow:0 0 0 4px #9b1723}
+.topo p{margin:12px 0 0;opacity:.9}
+.busca{padding:24px 30px;background:#fff}.busca label{display:block;font-weight:800;margin-bottom:10px}
+.linha-busca{display:flex;gap:10px}.linha-busca input{flex:1;min-width:0;padding:14px;border:2px solid #d8dce5;border-radius:12px;font:inherit;outline:none}.linha-busca input:focus{border-color:#e83e4b}
+button{border:0;border-radius:12px;padding:0 22px;background:#252d40;color:white;font:800 15px Nunito;cursor:pointer;transition:.2s}button:hover{background:#e83e4b;transform:translateY(-1px)}
+.dica{font-size:12px;color:#777;margin:9px 0 0}
+.resultado{padding:25px 30px 32px;min-height:310px;background:#f0f2f6}
+.placeholder{text-align:center;padding:30px 10px;color:#697080}.placeholder h2{font-size:20px;color:#30394b}.pokebola-grande{width:90px;height:90px;border:8px solid #293246;border-radius:50%;margin:0 auto 18px;background:linear-gradient(#e83e4b 0 43%,#293246 43% 57%,#fff 57%);position:relative}.pokebola-grande:after{content:'';position:absolute;width:24px;height:24px;border:6px solid #293246;background:#fff;border-radius:50%;top:25px;left:25px}
+.pokemon-card{display:grid;grid-template-columns: minmax(180px, .8fr) 1.2fr;gap:24px;align-items:center;background:white;border-radius:20px;padding:24px;box-shadow:0 8px 25px #26334b12}
+.art{background:radial-gradient(circle,#fff 10%,#dfe8f4 70%);border-radius:18px;display:grid;place-items:center;min-height:220px}.art img{width:100%;max-width:230px;image-rendering:auto}
+.info h2{margin:0;font-size:27px;text-transform:capitalize}.numero{color:#8992a3;font-weight:800;font-size:13px}
+.tipos{display:flex;gap:8px;margin:12px 0}.tipo{color:white;border-radius:20px;padding:5px 12px;font-size:12px;font-weight:800;text-transform:capitalize;background:#7b8b9a}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:16px}.stat{background:#f1f3f7;padding:12px;border-radius:12px}.stat small{display:block;color:#858d9b;font-weight:700}.stat strong{font-size:18px}
+.erro{background:#fff0f0;border:1px solid #ffc8c8;border-radius:12px;padding:18px;color:#a52b35;text-align:center}
+footer{text-align:center;padding:15px;color:#9ba2af;font-size:12px;background:#fff}
+@media(max-width:560px){body{padding:12px}.pokedex{border-width:7px}.topo,.busca,.resultado{padding-left:18px;padding-right:18px}.pokemon-card{grid-template-columns:1fr}.art{min-height:180px}.linha-busca button{padding:0 15px}}
